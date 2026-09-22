@@ -50,6 +50,14 @@ var projects = [
 
 var experiences = [
   {
+    org: 'BMO Financial Group',
+    role: 'Incoming AI Engineer',
+    date: 'Starting Oct 2026',
+    points: [
+      'Joining the Decision Science team to build and scale production machine learning systems.',
+    ],
+  },
+  {
     org: 'Fields Institute for Research in Mathematical Sciences',
     role: 'Visiting Scholar / ML Research Engineer',
     date: 'May 2025 – Mar 2026',
@@ -59,10 +67,10 @@ var experiences = [
   },
   {
     org: 'University of Toronto',
-    role: 'Course Instructor & Team Lead',
-    date: '2022 – 2025',
+    role: 'Course Coordinator / Instructor',
+    date: '2022 – 2026',
     points: [
-      'Led a team of 12 TAs while managing logistics for 400+ students; achieved some of the highest course evaluations for instructors in the department.',
+      'Led teams of up to 12 TAs while managing logistics for 400+ students; achieved some of the highest course evaluations for instructors in the department.',
       'Mentored 30+ TAs as Head TA, improving teaching technique and resolving team dynamics.',
       'Founded an educational project addressing a curriculum gap, securing departmental funding for its pedagogical impact, leading to promotion to Course Coordinator.',
     ],
@@ -92,10 +100,38 @@ var leadership = [
 /* ========== Education Data ========== */
 
 var education = [
-  'PhD in Mathematics, University of Toronto (2021–2026)',
-  'Budapest Semesters in Mathematics, selected participant (2020)',
-  'M.Sc. in Mathematical Sciences, UNAM (2020–2020)',
-  'B.Sc. in Mathematics, with Honours, UNAM (2015–2019)',
+  {
+    degree: 'PhD in Mathematics',
+    org: 'University of Toronto',
+    date: '2021–2026',
+    awards: [
+      'Quantitative Information Security Specialist (2025)',
+      'Blyth Fellowship (2025)',
+      'International Graduate Student Scholarship (2024)',
+      'Communication Excellence Award, Bird’s Eye Conference (2024)',
+      'Vivekananda Academic Excellence Award (2023)',
+      'Selected Participant, Heidelberg Laureate Forum (2023)',
+      'Most Understandable Scientist Award (2023)',
+    ],
+  },
+  {
+    degree: 'M.Sc. in Mathematical Sciences',
+    org: 'UNAM',
+    date: '2020',
+    meta: 'GPA: 4.0/4.0',
+    awards: [
+      'Stimulus Award for Accelerated Completion of MSc Degree (2021)',
+      'Honorary Mention, XXXVI Coloquio Víctor Neumann-Lara (2020)',
+      'Budapest Semesters in Mathematics, selected participant (2020)',
+    ],
+  },
+  {
+    degree: 'B.Sc. in Mathematics, with Honours',
+    org: 'UNAM',
+    date: '2015–2019',
+    meta: 'GPA: 4.0/4.0',
+    awards: ['High-Performance Graduate Qualification Scholarship (2019)'],
+  },
 ];
 
 /* ========== Publications Data ========== */
@@ -173,7 +209,7 @@ var publications = [
         authors: 'Matos-Wiederhold, T.',
         title: 'On Complexity, Computation, and Graph Homomorphisms',
         venue:
-          'University of Toronto, 2026. Advisors: Spencer Unger and Franklin D. Tall',
+          'PhD thesis, University of Toronto, 2026. Advisors: Spencer Unger and Franklin D. Tall',
       },
       {
         authors: 'Matos-Wiederhold, T.',
@@ -287,8 +323,28 @@ function renderEducation() {
   if (!list) return;
 
   list.innerHTML = education
-    .map(function (line) {
-      return '<div class="edu-line">' + line + '</div>';
+    .map(function (e) {
+      var metaHtml = e.meta ? '<span class="edu-meta">' + e.meta + '</span>' : '';
+
+      var awardsHtml = '';
+      if (e.awards && e.awards.length) {
+        var items = e.awards
+          .map(function (a) {
+            return '<li>' + a + '</li>';
+          })
+          .join('');
+        awardsHtml = '<ul class="edu-awards">' + items + '</ul>';
+      }
+
+      return (
+        '<div class="edu-item">' +
+        '<div class="edu-header">' +
+        '<h3 class="edu-degree">' + e.degree + ', ' + e.org + '</h3>' +
+        '<div class="edu-date">' + metaHtml + ' · ' + e.date + '</div>' +
+        '</div>' +
+        awardsHtml +
+        '</div>'
+      );
     })
     .join('');
 }

@@ -545,13 +545,67 @@ img {
 .education-list {
   display: flex;
   flex-direction: column;
-  gap: 0.5rem;
+  gap: 1.5rem;
 }
 
-.edu-line {
-  font-size: 0.925rem;
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.edu-header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.edu-degree {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 0.95rem;
+  color: var(--text);
+}
+
+.edu-date {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
   color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+.edu-meta {
+  font-family: var(--font-mono);
+}
+
+.edu-awards {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.edu-awards li {
+  font-size: 0.8rem;
+  color: var(--text-secondary);
+  opacity: 0.85;
   line-height: 1.5;
+  padding-left: 1.1rem;
+  position: relative;
+}
+
+.edu-awards li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+  opacity: 0.4;
 }
 
 /* ========== Publications ========== */
