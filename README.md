@@ -1,2 +1,0 @@
-# wiederhold
-Personal website

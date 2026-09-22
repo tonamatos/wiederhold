@@ -4,11 +4,11 @@
 var projects = [
   {
     title: 'QuantGPT',
-    tagline: 'Agentic AI for real-time risk analysis',
+    tagline: 'Agentic AI for post-quantum risk assessment',
     description:
-      'Multi-agent RAG pipeline with knowledge-graph reasoning and statistical inference, built from scratch using LLM APIs in partnership with a major Canadian bank. Automated risk-analysis workflows, saving 200+ analyst-hours. Presented to 250+ bank employees including senior executives.',
+      'Multi-agent RAG pipeline with knowledge-graph reasoning, built from scratch using LLM APIs in partnership with a major Canadian bank. Automated risk-analysis, saving 200+ analyst-hours. Presented to 250+ bank employees including senior executives.',
     tags: ['Python', 'LLMs', 'Knowledge Graphs', 'RAG', 'Statistical Inference'],
-    link: 'https://quant.wiederhold.dev',
+    link: null,
     featured: true,
   },
   {
@@ -17,13 +17,13 @@ var projects = [
     description:
       'Extended Black-Scholes with Poisson jumps to capture sudden market moves. Calibrated model parameters on historical price data using L-BFGS optimization and compared hedging strategies across multiple assets.',
     tags: ['Python', 'Quantitative Finance', 'Optimization', 'ML'],
-    link: null,
+    link: 'https://quant.wiederhold.dev/',
   },
   {
     title: 'BorderTracer',
-    tagline: 'Published algorithm for graph-based image segmentation',
+    tagline: 'Published in Theoretical Computer Science (2026)',
     description:
-      'New border-tracing algorithm that generalizes classical pixel-grid techniques to arbitrary polygonal tilings in abstract adjacency graphs. Published in Theoretical Computer Science (2025).',
+      'New border-tracing algorithm that generalizes classical pixel-grid techniques to arbitrary polygonal tilings in abstract adjacency graphs.',
     tags: ['Algorithms', 'Graph Theory', 'Image Processing'],
     link: 'https://bordertracer.research.wiederhold.dev',
   },
@@ -31,9 +31,9 @@ var projects = [
     title: 'NeuroShannon',
     tagline: 'GNNs for channel capacity estimation',
     description:
-      'Used graph neural networks to optimize a noisy communication channel and estimate its Shannon capacity — the theoretical maximum rate at which information can be reliably transmitted through the channel.',
+      'Used graph neural networks to optimize a noisy communication channel and estimate its Shannon capacity.',
     tags: ['GNNs', 'PyTorch', 'Information Theory', 'Optimization'],
-    link: null,
+    link: 'https://github.com/tonamatos/neuro-shannon',
   },
   {
     title: 'FerGroup',
@@ -51,11 +51,10 @@ var projects = [
 var experiences = [
   {
     org: 'Fields Institute for Research in Mathematical Sciences',
-    role: 'Visiting Scholar',
+    role: 'Visiting Scholar / ML Research Engineer',
     date: 'May 2025 – Mar 2026',
     points: [
-      'Developed QuantGPT: an agentic AI framework using knowledge-graph reasoning and statistical inference for real-time risk analysis with a major Canadian bank.',
-      'Designed predictive analytics dashboards linking real-time event streams to risk scores, automating analysis pipelines and saving 200+ analyst-hours.',
+      'Developed QuantGPT: an agentic AI framework for risk assessment with a major Canadian bank.',
     ],
   },
   {
@@ -93,9 +92,9 @@ var leadership = [
 /* ========== Education Data ========== */
 
 var education = [
-  'PhD in Mathematics, University of Toronto (2021–expected 2026)',
+  'PhD in Mathematics, University of Toronto (2021–2026)',
   'Budapest Semesters in Mathematics, selected participant (2020)',
-  'M.Sc. in Mathematical Sciences, UNAM (2020)',
+  'M.Sc. in Mathematical Sciences, UNAM (2020–2020)',
   'B.Sc. in Mathematics, with Honours, UNAM (2015–2019)',
 ];
 
@@ -120,7 +119,6 @@ var publications = [
         title:
           'Border tracing in oriented adjacency graphs of polygonal tilings with application to objects made of rectangular, triangular or hexagonal tiles',
         venue: 'Theoretical Computer Science, 2025',
-        link: 'https://bordertracer.research.wiederhold.dev',
       },
       {
         authors:
@@ -146,11 +144,6 @@ var publications = [
         venue: '2026',
       },
       {
-        authors: 'Gómez, S., González, I., Hansberg, A., Matos-Wiederhold, T.',
-        title: 'Amoeba trees',
-        venue: '2026',
-      },
-      {
         authors: 'Matos-Wiederhold, T.',
         title: 'Infinitary amoebas',
         venue: '2026',
@@ -166,6 +159,11 @@ var publications = [
         title: 'A concise proof of the L₀ dichotomy',
         venue: '2026',
       },
+      {
+        authors: 'Gómez, S., González, I., Hansberg, A., Matos-Wiederhold, T.',
+        title: 'Amoeba trees',
+        venue: '2026',
+      },
     ],
   },
   {
@@ -173,20 +171,20 @@ var publications = [
     items: [
       {
         authors: 'Matos-Wiederhold, T.',
-        title: 'PhD thesis',
+        title: 'On Complexity, Computation, and Graph Homomorphisms',
         venue:
-          'University of Toronto, 2026. Advisors: Dr. Spencer Unger and Dr. Franklin D. Tall',
+          'University of Toronto, 2026. Advisors: Spencer Unger and Franklin D. Tall',
       },
       {
         authors: 'Matos-Wiederhold, T.',
         title: 'The Open Coloring Axiom',
-        venue: 'MSc thesis, UNAM, 2021. Advisor: Dr. Roberto Pichardo Mendoza',
+        venue: 'MSc thesis, UNAM, 2021. Advisor: Roberto Pichardo',
       },
       {
         authors: 'Matos-Wiederhold, T.',
         title:
           'Applications of the Rasiowa-Sikorski lemma to the theory of partial orders and to Ramsey theory',
-        venue: 'BSc thesis, UNAM, 2019. Advisor: Dr. Roberto Pichardo Mendoza',
+        venue: 'BSc thesis, UNAM, 2019. Advisor: Roberto Pichardo',
       },
     ],
   },
