@@ -68,10 +68,10 @@ var experiences = [
   {
     org: 'University of Toronto',
     role: 'Course Coordinator / Instructor',
-    date: '2022 – 2026',
+    date: '2023 – 2026',
     points: [
       'Led teams of up to 12 TAs while managing logistics for 400+ students; achieved some of the highest course evaluations for instructors in the department.',
-      'Mentored 30+ TAs as Head TA, improving teaching technique and resolving team dynamics.',
+      'Helped 30+ TAs improve their teaching techniques and resolve team dynamics as a Mentor TA.',
       'Founded an educational project addressing a curriculum gap, securing departmental funding for its pedagogical impact, leading to promotion to Course Coordinator.',
     ],
     award: 'Ida Bulat Graduate Teaching Award (2025)',
@@ -84,9 +84,16 @@ var leadership = [
   {
     role: 'Vice-President',
     org: 'Mathematics Graduate Student Association',
-    date: '2023 – 2024',
+    date: '2022 – 2023',
     description:
       'Helped double the association’s budget for the first time in a decade; organized student support events for 200+ participants.',
+  },
+  {
+    role: 'Research Mentor',
+    org: 'U of T Outreach',
+    date: '2022 – 2025',
+    description:
+      'Supervised graduate and undergraduate research accepted to a national conference.',
   },
   {
     role: 'Treasurer',
@@ -118,7 +125,7 @@ var education = [
     degree: 'M.Sc. in Mathematical Sciences',
     org: 'UNAM',
     date: '2020',
-    meta: 'GPA: 4.0/4.0',
+    meta: 'GPA: 4.0/4.0;',
     awards: [
       'Stimulus Award for Accelerated Completion of MSc Degree (2021)',
       'Honorary Mention, XXXVI Coloquio Víctor Neumann-Lara (2020)',
@@ -129,7 +136,7 @@ var education = [
     degree: 'B.Sc. in Mathematics, with Honours',
     org: 'UNAM',
     date: '2015–2019',
-    meta: 'GPA: 4.0/4.0',
+    meta: 'GPA: 4.0/4.0;',
     awards: ['High-Performance Graduate Qualification Scholarship (2019)'],
   },
 ];
@@ -340,7 +347,7 @@ function renderEducation() {
         '<div class="edu-item">' +
         '<div class="edu-header">' +
         '<h3 class="edu-degree">' + e.degree + ', ' + e.org + '</h3>' +
-        '<div class="edu-date">' + metaHtml + ' · ' + e.date + '</div>' +
+        '<div class="edu-date">' + metaHtml + '  ' + e.date + '</div>' +
         '</div>' +
         awardsHtml +
         '</div>'
