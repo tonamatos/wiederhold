@@ -51,10 +51,11 @@ var projects = [
 var experiences = [
   {
     org: 'BMO Financial Group',
-    role: 'Incoming AI Engineer',
-    date: 'Starting Oct 2026',
+    role: 'AI Engineer, Decision Science',
+    date: 'Oct 2026',
+    current: true,
     points: [
-      'Joining the Decision Science team to build and scale production machine learning systems.',
+      'Serving as the team’s dedicated AI Engineer within Enterprise Risk & Portfolio Management.',
     ],
   },
   {
@@ -108,9 +109,9 @@ var leadership = [
 
 var education = [
   {
-    degree: 'PhD in Mathematics',
+    degree: 'Ph.D. in Mathematics',
     org: 'University of Toronto',
-    date: '2021–2026',
+    date: '2021 – 2026',
     awards: [
       'Quantitative Information Security Specialist (2025)',
       'Blyth Fellowship (2025)',
@@ -135,7 +136,7 @@ var education = [
   {
     degree: 'B.Sc. in Mathematics, with Honours',
     org: 'UNAM',
-    date: '2015–2019',
+    date: '2015 – 2019',
     meta: 'GPA: 4.0/4.0;',
     awards: ['High-Performance Graduate Qualification Scholarship (2019)'],
   },
@@ -289,11 +290,13 @@ function renderExperience() {
         awardHtml = '<div class="exp-award">' + e.award + '</div>';
       }
 
+      var dateText = e.current ? e.date + ' – Present' : e.date;
+
       return (
-        '<div class="exp-item">' +
+        '<div class="exp-item' + (e.current ? ' is-current' : '') + '">' +
         '<div class="exp-meta">' +
         '<div class="exp-org">' + e.org + '</div>' +
-        '<div class="exp-date">' + e.date + '</div>' +
+        '<div class="exp-date">' + dateText + '</div>' +
         '</div>' +
         '<div class="exp-body">' +
         '<h3>' + e.role + '</h3>' +

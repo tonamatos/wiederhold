@@ -448,6 +448,28 @@ img {
   font-family: var(--font-mono);
   font-size: 0.8rem;
   color: var(--text-secondary);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.exp-date::before {
+  content: '';
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--border);
+  flex-shrink: 0;
+}
+
+.exp-item.is-current .exp-date {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.exp-item.is-current .exp-date::before {
+  background: var(--accent);
+  box-shadow: 0 0 0 3px var(--accent-light);
 }
 
 .exp-body h3 {
