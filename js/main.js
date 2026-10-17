@@ -51,7 +51,7 @@ var projects = [
 var experiences = [
   {
     org: 'BMO Financial Group',
-    role: 'AI Engineer, Decision Science',
+    role: 'AI Engineer - Decision Science',
     date: 'Oct 2026',
     current: true,
     points: [
